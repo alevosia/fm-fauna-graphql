@@ -1,0 +1,39 @@
+.form {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin: 2rem auto;
+	max-width: 500px;
+	padding: 0;
+}
+
+.label {
+	color: #666;
+	font-size: 0.75rem;
+	letter-spacing: 0.1em;
+	text-indent: 0.25rem;
+	text-transform: uppercase;
+	width: 350px;
+}
+
+.input,
+.button {
+	border-radius: 0.25rem;
+	box-sizing: border-box;
+	line-height: 2rem;
+}
+
+.input {
+	display: block;
+	border: 1px solid #444;
+	padding: 0 0.5rem;
+	width: 90%;
+}
+
+.button {
+	background: #444;
+	border: 1px solid #000;
+	color: white;
+	font-weight: bold;
+	width: 125px;
+}
