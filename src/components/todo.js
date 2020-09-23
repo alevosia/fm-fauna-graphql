@@ -13,6 +13,10 @@ const Todo = ({ todo, fetchTodos }) => {
 			.then(fetchTodos)
 	}
 
+	const handleDelete = () => {
+		axios.post('/api/delete-todo', { id: todo._id }).then(fetchTodos)
+	}
+
 	return (
 		<>
 			<label htmlFor={`todo-toggle-${todo._id}`} className={styles.label}>
@@ -32,6 +36,15 @@ const Todo = ({ todo, fetchTodos }) => {
 			>
 				{todo.text}
 			</p>
+
+			<label htmlFor={`todo-toggle-${todo._id}`} className={styles.label}>
+				Delete
+			</label>
+			<button onClick={handleDelete} className={styles.delete}>
+				<span role="img" aria-label="delete" title="delete this todo">
+					❌
+				</span>
+			</button>
 		</>
 	)
 }

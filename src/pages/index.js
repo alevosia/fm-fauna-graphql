@@ -30,8 +30,6 @@ export default () => {
 
 			const fetchedTodos = response.data.todos
 
-			console.log(fetchedTodos)
-
 			setTodos(fetchedTodos)
 			setStatus(LOADED)
 		})
